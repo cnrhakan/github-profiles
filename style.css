@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', "Open Sans",  sans-serif;
+}
+
+body {
+  background-color: #f6f8fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #d0d7de;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0969da;
+}
+
+.user-info-card {
+  display: none; 
+  background-color: white;
+  border: 2px solid #d0d7de;
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.user-info-card-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.user-div-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d0d7de;
+  padding: 3px;
+  background-color: white;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-title-div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  color: #24292f;
+  line-height: 1;
+}
+
+.user-title-div a {
+  color: #0969da;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.user-bio {
+  color: #57606a;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.user-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.user-stats p {
+  color: #24292f;
+}
+
+.user-stats b {
+  color: #57606a;
+  font-weight: normal;
+}
+
+.user-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.user-projects a {
+  color: #0969da;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.user-projects a:hover {
+  background-color: #f6f8fa;
+}
+
+@media (max-width: 768px) {
+  .user-info-card{
+    justify-content: center;
+  }
+  .user-info-card-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .user-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .user-title-div {
+    justify-content: center;
+  }
+}
